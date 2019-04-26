@@ -52,15 +52,13 @@
 	?>
 	<?php if( $_POST["name"] || $_POST["age"] ) {
       if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
-         die ("invalid name and name should be alpha");
+         echo "noname";
       }
       echo "Welcome ". $_POST['name']. "<br />";
       echo "You are ". $_POST['age']. " years old.";
-      
-      exit();
     }
 	?>
-	<form action = "<?php $_PHP_SELF ?>" method = "POST">
+	<form action = "<?php welcome.php ?>" method = "POST">
          Name: <input type = "text" name = "name" />
          Age: <input type = "text" name = "age" />
          <input type = "submit" />
